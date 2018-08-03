@@ -1,0 +1,15 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: hr-app
+  cloud:
+     consul:
+       host: 192.168.56.1
+       port: 8500
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+        
