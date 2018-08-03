@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: emp-data-service3
+  datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/springdb?useSSL=false
+        username: root
+        password: root
+        name: dataSource
+
+  cloud:
+    zookeeper:
+      discovery:
+        enabled: true
+      connect-string: localhost:2181
+      
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    restart:
+      enabled: true
+    shutdown:
+       enabled: true
+    health:
+      sensitive: false    
