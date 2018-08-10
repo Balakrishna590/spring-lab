@@ -1,0 +1,1 @@
+create table emp(empno int,name varchar(20),address varchar(20),salary double);
